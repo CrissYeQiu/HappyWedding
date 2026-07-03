@@ -1,0 +1,238 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #f7f1e8;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover{
+
+text-align:center;
+
+animation:fade 1s;
+
+}
+
+.envelope{
+
+width:280px;
+
+transition:.5s;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:30px;
+
+background:#b88b4a;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#8c6331;
+
+transform:scale(1.05);
+
+}
+
+#letter{
+    display: none;
+    width: 100%;
+    max-width: 720px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.15);
+    text-align: center;
+    animation: slide .8s ease;
+}
+
+#letter h1{
+
+font-family:'Great Vibes';
+
+font-size:58px;
+
+color:#9d6b3f;
+
+margin-bottom:20px;
+
+}
+
+#letter h2{
+
+font-size:42px;
+
+margin-bottom:25px;
+
+color:#444;
+
+}
+
+#letter p{
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+color:#666;
+
+}
+
+.barcode{
+    margin: 35px 0;
+}
+
+.barcode img{
+    width: 220px;
+    max-width: 100%;
+    border: 8px solid #f3f3f3;
+    border-radius: 18px;
+}
+
+span{
+
+display:block;
+
+margin-top:15px;
+
+font-size:15px;
+
+color:#999;
+
+}
+
+@keyframes slide{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@media (max-width:768px){
+
+    body{
+        padding: 25px 15px;
+    }
+
+    #letter{
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    #letter h1{
+        font-size:42px;
+    }
+
+    #letter h2{
+        font-size:30px;
+    }
+
+    #letter p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .barcode img{
+        width:180px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    body{
+        padding:20px 12px;
+    }
+
+    #letter{
+        padding:24px 18px;
+    }
+
+    #letter h1{
+        font-size:34px;
+    }
+
+    #letter h2{
+        font-size:26px;
+    }
+
+    button{
+        width:100%;
+        font-size:16px;
+        padding:14px;
+    }
+
+    .envelope{
+        width:220px;
+    }
+
+}
